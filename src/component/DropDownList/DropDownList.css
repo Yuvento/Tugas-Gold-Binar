@@ -1,0 +1,29 @@
+.Accor-Style{
+    margin-top: 10rem ;
+}
+
+.Accor-Header{
+    margin-top: 5rem;
+}
+
+.Drop{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 630;
+    font-size: 3.5rem;
+}
+
+.Drop2{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 630;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+@media  (max-width : 767px){
+    .Drop2{
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+    }
+
+}

@@ -1,0 +1,32 @@
+
+
+
+.navbar-toggler
+{
+   border-color:rgba(0, 0, 0, 0) !important;
+  
+}
+
+.Section{
+    background: #F1F3FF;
+    
+}
+
+.offCanvas2{
+    margin-left: 3rem;
+     margin-top: 2rem;
+    
+
+}
+
+
+
+
+@media  (max-width : 767px){
+    .offCanvas2{
+        margin-bottom: 2rem;
+        margin-left:0 ;
+    }
+
+    
+}

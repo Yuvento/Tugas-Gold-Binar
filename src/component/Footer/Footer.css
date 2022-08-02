@@ -1,0 +1,32 @@
+.Contain2{
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+.Contain3{
+    margin-top: 2rem;
+}
+
+.Contain4{
+    text-decoration: none;
+    color: black;
+    margin-bottom: 5rem;
+    margin-top: 10rem;
+    margin-left: 10rem;
+}
+
+.Contain5{
+    margin-right: 10rem;
+}
+
+@media  (max-width : 767px){
+    .Contain4{
+        margin-left:0;
+        margin-top: 1rem !important;
+        margin-bottom: 0;
+    }
+    .Contain5{
+       margin-top: 3rem !important;
+    }
+
+}

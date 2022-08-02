@@ -1,0 +1,38 @@
+.RentCar{
+  margin: 0;
+  width: 99%;
+  
+}
+
+.NavBar-Locate{
+  margin-top: 6rem;
+}
+
+.CardBody{
+  margin-top: 5rem !important;
+}
+
+.CardText{
+  margin-top: 10rem !important;
+}
+
+.Total{
+  margin-top: 5rem !important;
+}
+
+.navbar2{
+  background: #F1F3FF;
+  
+}
+
+.navbar{
+  height: 20rem !important;
+}
+
+.navbarfluid{
+  margin-bottom: 10rem;
+}
+
+.Background{
+  background: white !important;
+}

@@ -1,0 +1,20 @@
+.Card-Contain{
+    margin-top: 5rem;
+    overflow: hidden;
+}
+
+.Card1{
+    margin-left: 2rem;
+}
+
+.Card2{
+    margin-top: 2rem;
+}
+
+@media (max-width : 767px){
+    .Card3{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+}

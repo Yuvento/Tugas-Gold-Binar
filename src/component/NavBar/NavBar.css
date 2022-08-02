@@ -1,0 +1,36 @@
+
+
+
+.navbar-toggler
+{
+   border-color:rgba(0, 0, 0, 0) !important;
+  
+}
+
+.Section{
+    background: #F1F3FF;
+    
+}
+
+.offCanvas2{
+    margin-left: 4rem;
+     margin-top: 2rem;
+    
+
+}
+
+.offcanvas-body{
+    margin-right: 20rem;
+}
+
+
+@media  (max-width : 767px){
+    .offCanvas2{
+        margin-bottom: 2rem;
+        margin-left:0 ;
+    }
+
+    .img-navbar{
+        margin-bottom: 3rem;
+    }
+}

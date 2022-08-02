@@ -1,0 +1,24 @@
+.Section-Set{
+    background: white;
+}
+
+.Test{
+    padding-top: 10rem;
+   
+}
+
+li{
+    padding-top: 2rem;
+ 
+}
+
+.List2{
+    list-style: none !important;
+}
+
+@media  (max-width : 767px){
+    .Test{
+        padding-top: 3rem;
+       
+    }
+}
