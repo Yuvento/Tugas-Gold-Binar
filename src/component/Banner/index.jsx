@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import "./Banner.css"
 
-export default ()=> {
+const Banner= ()=> {
     return (
      
         <Container fluid="sm" className="Banner-Banner">
@@ -18,3 +18,4 @@ export default ()=> {
     )
 
 }
+export default Banner

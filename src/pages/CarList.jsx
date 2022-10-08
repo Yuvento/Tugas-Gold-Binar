@@ -9,40 +9,73 @@ import Container from 'react-bootstrap/Container'
 import {Link} from "react-router-dom";
 import Home from '../images/Rectangle 74.png'
 import Forms from "../component/Forms"
-
+import axios from 'axios';
 
 import  {useNavigate} from "react-router-dom";
-export default function CarList (){
+
+const  CarList = ()=>{
     const [cars,setCars] = useState([])
+    const [filteredCars, setFilteredCars] = useState([])
     const [loading,setloading]=useState(false)
+    const [form,setForm] = useState ({
+        name:'',
+        category : '',
+        price : '',
+        status : ''
+
+    })
+
     let navigate = useNavigate()
-   
+    console.log(filteredCars)
 
     
     async function getCars(){
         try{
-            setloading(true);
-            const res = await window.fetch(URL);
-            const data = await res.json();
-            const filterData = data.filter(item => item.image !== null)
-            setCars(filterData)
-            setloading(false);
+
+                setloading(true);
+                const response = await axios.get('https://bootcamp-rent-car.herokuapp.com/admin/car');
+                const data = response.data;
+                console.log(response);
+                const filterData = data.filter(item => item.image !== null)
+                setCars(filterData)
+                setFilteredCars(filterData)
+                setloading(false);
+              
+            
         }
         catch(e){
-        console.log(e);
         setloading(false);
         }
     }
     useEffect(()=>{
         getCars()
     },[]) 
-    // arrray kosong cmn dijalananin 1x
+    
 
+    const handleSearch = ()=>{
+        let data = cars
+        if(form.name != ""){
+            data = data.filter(item => item.name == form.name)
+        }
+        if(form.status != ""){
+            data = data.filter(item => item.status == form.status)
+        }
+        if(form.status != ""){
+            data = data.filter(item => item.price == form.price)
+        }
+        if(form.status != ""){
+            data = data.filter(item => item.category == form.category)
+        }
+    
+        
+        setFilteredCars(data)
+    }
 
-    function handleViewDetail(id){
+    const handleViewDetail = (id)=>{
         navigate(`/cars/${id}`)
     }
 
+   
     return(
 
         <>
@@ -62,9 +95,9 @@ export default function CarList (){
                
                
                          <div className="offcanvas-body ">
-                           <ul className="navbar-nav justify-content-end flex-grow-1 pe-3 "/>
+                           <div className="navbar-nav justify-content-end flex-grow-1 pe-3 "/>
                              <div className="nav-item offCanvas2 ">
-                                 <a className="nav-link fw-bold  " href="#"><h5>Our Services</h5></a>
+                                 <a key="{ite}" className="nav-link fw-bold" href="#"><h5>Our Services</h5></a>
                              </div>
                              <div className="nav-item offCanvas2">
                                  <a className="nav-link fw-bold" href="#"><h5>Testimony</h5></a>
@@ -80,12 +113,12 @@ export default function CarList (){
                      </div>
                    </nav>
            </Container>
-           <Forms/>
+           <Forms handleSearch={handleSearch} setForm={setForm}/>
         </div>
            
                 <Container>
                     <Row xs={1} md={4} className="g-4 ">
-                            {loading ?<div>Loading</div>: cars.map(car=>(
+                            {loading ?<div>Loading</div>: filteredCars.map(car=>(
                            <Col>
                             <Card className='NavBar-Locate' key={car.id} >
                             <Card.Img variant="top" src={car.image} />
@@ -100,10 +133,11 @@ export default function CarList (){
                          ))}
                         </Row>
                 </Container>
-
             </>
         
     
     
     )
 }
+
+export default CarList;

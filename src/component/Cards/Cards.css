@@ -9,12 +9,17 @@
 
 .Card2{
     margin-top: 2rem;
+    
 }
 
-@media (max-width : 767px){
+@media (max-width : 812px){
     .Card3{
         margin-left: 1rem;
         margin-right: 1rem;
         margin-bottom: 1rem;
+    }
+
+    .Card2{
+        margin-left: 0.5rem;
     }
 }

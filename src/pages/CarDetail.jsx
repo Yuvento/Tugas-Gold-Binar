@@ -11,19 +11,18 @@ import { faUsers } from "@fortawesome/free-solid-svg-icons"
 import Home from '../images/Rectangle 74.png'
 import Forms from "../component/Forms"
 import "./CarList.css"
+import axios from "axios";
 
 
+const CarDetail= ()=>{
 
-
-
-
-export default function CarDetail (){
+    
     const [car,setCar] = useState('')
     const {id}= useParams();
     async function getCars(){
         try{
-            const res = await window.fetch(`${URL}/${id}`);
-            const data = await res.json();
+            const res = await axios.get(`${URL}/${id}`);
+            const data = res.data
             setCar(data)
         }
         catch(e){
@@ -139,3 +138,4 @@ export default function CarDetail (){
         </>
     )
 }
+export default CarDetail

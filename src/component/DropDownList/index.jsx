@@ -8,7 +8,7 @@ import "./DropDownList.css"
 
 
 
-export default () => {
+const DropDownList = () => {
   return (
 
       <Container className='Accor-Style'>
@@ -78,6 +78,7 @@ export default () => {
 
 
 }
+export default DropDownList
 
 
 

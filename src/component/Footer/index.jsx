@@ -6,8 +6,7 @@ import Home from '../../images/Rectangle 74.png'
 import './Footer.css'
 
 
-
-export default ()=>{
+const Footer = ()=>{
     return (
         <Container className="Contain2">
         <Row>
@@ -51,3 +50,4 @@ export default ()=>{
 
 
 }
+export default Footer

@@ -9,14 +9,14 @@ import Logo4 from "../../images/Frame 43.png"
 import { useMediaQuery } from 'react-responsive'
 
 
-function CardSLider ()  {
+const CardSLider = ()=>  {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded ] = useState(false)
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-width: 1224px)'
   })
   const isTabletOrMobile = useMediaQuery
-  ({ query: '(max-width: 768px)' })
+  ({ query: '(max-width: 812px)' })
  
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,

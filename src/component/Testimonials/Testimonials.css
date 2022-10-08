@@ -17,3 +17,8 @@
 }
 
 
+@media  (max-width : 812px){
+    .Testi-style2{
+        text-align: center;
+    }
+}

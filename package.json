@@ -16,6 +16,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/material": "^5.9.2",
+    "axios": "^1.0.0",
     "babel-plugin-macros": "^3.1.0",
     "bootstrap": "^5.2.0",
     "keen-slider": "^6.7.0",

@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col';
 
 
 
-function SectionHero(){
+const SectionHero=()=>{
     return(
     <section className='Contain'>
       <Container >
@@ -20,7 +20,7 @@ function SectionHero(){
               <Link to="/CarList"><button type="button" className="btn btn-success"><h4 className="button_margin">Mulai Sewa Mobil</h4></button> </Link>
           </Col>
           <Col xs={12} md={6}>
-              <img className="image" src={logo} alt="" />
+              <img className="car-image" src={logo} alt="" />
           </Col>
         </Row>
         </Container>

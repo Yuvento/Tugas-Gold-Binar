@@ -30,14 +30,7 @@ section{
 
 }
 
-.Paraf{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    width: 32.8rem;
 
-}
 
 .btn {
     width: 14rem;
@@ -47,21 +40,19 @@ section{
     
 }
 
+img{
+    margin-top: 2rem;
+}
+
 
 
 .button_margin{
     margin: 0;
 }
 
-
-.image{
-    width:50rem;
+@media  (max-width : 812px){
+.car-image{
+    width:36rem;
 }
 
-
-
-
-img{
-    margin-top: 2rem;
 }
-

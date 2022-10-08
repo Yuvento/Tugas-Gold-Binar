@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 
 
 
-function Testimonials(){
+const Testimonials=()=>{
     return(
         <Container>
               <h1 className='Testi-style1'>Testimonial</h1>

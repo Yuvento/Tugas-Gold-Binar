@@ -7,14 +7,14 @@ import "./SectionContent.css"
  
 
 
-function SectionContent(){
+const SectionContent= ()=>{
     return (
     <section className="Section-Set">
       <Container>
         {/* Stack the columns on mobile by making one full-width and the other half-width */}
         <Row >
             <Col xs={12} md={6}>
-                 <img src={logo} />
+                 <img className="girlFront" src={logo} />
             </Col>
        
           <Col xs={12}  md={6} >

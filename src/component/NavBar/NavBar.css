@@ -24,13 +24,21 @@
 }
 
 
-@media  (max-width : 767px){
+@media  (max-width : 812px){
     .offCanvas2{
         margin-bottom: 2rem;
         margin-left:0 ;
+        
     }
 
     .img-navbar{
         margin-bottom: 3rem;
     }
+    
+    #offcanvasNavbar{
+        width: 75%;
+        
+    }
+
+
 }

@@ -8,7 +8,7 @@ import logo3 from "../../images/icon_price.png"
 import logo4 from "../../images/icon_professional.png"
 import "./Cards.css"
 
-function Cards () {
+const Cards = ()=> {
     return(
         <section className="Section-Set Card-Contain" >
         <Container>
@@ -19,11 +19,11 @@ function Cards () {
             <div className='Card1'>
                 <Card.Title><img src={logo1} /></Card.Title>
                 <Card.Title><h2  className='Card2'>Mobil Lengkap</h2></Card.Title>
-                <Card.Text>
+               
                     <h5  className='Card2'>
                         Tersedia banyak pilihan mobil,kondisi masih baru,bersih dan terawat
                     </h5>               
-                </Card.Text>
+             
             </div>
                 </Card>
             </Col>
@@ -33,11 +33,11 @@ function Cards () {
                 <div className='Card1'>
                     <Card.Title><img src={logo2} /></Card.Title>
                     <Card.Title><h2  className='Card2'>Harga Murah</h2></Card.Title>
-                    <Card.Text>
+                  
                     <h5  className='Card2'>
                         Harga murah dan bersaing, bisa bandingkan dengan harga kami dengan rental mobil lain
                     </h5>
-                    </Card.Text>
+ 
                 </div>
             </Card>
             </Col>
@@ -47,11 +47,9 @@ function Cards () {
             <div className='Card1'>
                 <Card.Title><img src={logo3} /></Card.Title>
                 <Card.Title><h2  className='Card2'>Layanan 24 Jam</h2></Card.Title>
-                <Card.Text>
                 <h5  className='Card2'>
                     Siap melayani kebutuhan Anda selama 24 jam nonstop.Kami juga tersedia di akhir minggu
                 </h5>
-                </Card.Text>
             </div>
                 </Card>
             </Col>
@@ -61,11 +59,9 @@ function Cards () {
             <div className='Card1'>
                 <Card.Title><img src={logo4} /></Card.Title>
                 <Card.Title><h2  className='Card2'>Sopir Profesional</h2></Card.Title>
-                <Card.Text>
                 <h5  className='Card2'>
                     Sopir yang profesional, berpengalaman, jujur, ramah dan selalu tepat waktu
                 </h5>
-                </Card.Text>
             </div>
                 </Card>
             </Col>

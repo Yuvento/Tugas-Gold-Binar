@@ -6,7 +6,8 @@ import Col from "react-bootstrap/Col"
 import "./Forms.css"
 import Card from 'react-bootstrap/Card';
 
-export default () =>{
+const Forms = (props)=> {
+  const {handleSearch,setForm} = props;
 
     return(
         <section className='ContainerManage'>
@@ -17,7 +18,7 @@ export default () =>{
                                    <Form className="RowManage">
                                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                                 <Form.Label>Nama Mobil</Form.Label>
-                                                <Form.Control className="Form-Control" type="text" placeholder="Ketik nama/tipe mobil" />
+                                                <Form.Control className="Form-Control" type="text" placeholder="Ketik nama/tipe mobil" onChange={(event) => setForm(prev => ({...prev, name: event.target.value}))} />
                                             </Form.Group>
                                     </Form>
                                </Col>
@@ -25,10 +26,10 @@ export default () =>{
                                     <Form>
                                         <Form.Group className="mb-3" controlId="formBasicEmail">
                                                 <Form.Label>Kategori</Form.Label>
-                                                   <Form.Select className="Form-Control" >
-                                                        <option>Masukan Kapasitas Mobil</option>
-                                                        <option>2-3</option>
-                                                        <option>4-6</option>
+                                                   <Form.Select className="Form-Control" onChange={(event) => setForm(prev => ({...prev, category: event.target.value}))}>
+                                                        <option >Masukan Kapasitas Mobil</option>
+                                                        <option value="4-5 orang">4-5 orang</option>
+                                                        <option value="6-8 orang">6-8 orang</option>
                                                    </Form.Select>
                                             </Form.Group>
                                     </Form>
@@ -37,21 +38,22 @@ export default () =>{
                                     <Form>
                                         <Form.Group className="mb-3" controlId="formBasicEmail">
                                                 <Form.Label>Harga</Form.Label>
-                                                <Form.Select className="Form-Control" >
+                                                <Form.Select className="Form-Control" onChange={(event) => setForm(prev => ({...prev, price: event.target.value}))}>
                                                         <option>Masukan Harga sewa per Hari</option>
-                                                        <option>Rp. 500.000</option>
-                                                        <option>Rp. 700.000</option>
+                                                        <option value={2000000000}>Rp. 2.000.000.000</option>
+                                                        <option value={5000000000}>Rp. 5.000.000.000</option>
                                                 </Form.Select>
                                             </Form.Group>
                                     </Form>
                                 </Col>
                                 <Col>
                                     <Form>
-                                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                                        <Form.Group className="mb-3 status" controlId="formBasicEmail">
                                                 <Form.Label>Status</Form.Label>
-                                                <Form.Select >
-                                                        <option>Disewa</option>
-                                                        <option>tidak disewa</option>
+                                                <Form.Select onChange={(event) => setForm(prev => ({...prev, status: event.target.value}))}>
+                                                        <option >Pilih Status</option>
+                                                        <option value="true">Disewa</option>
+                                                        <option value="false">tidak disewa</option>
                                                 </Form.Select>
                                             </Form.Group>
             
@@ -59,7 +61,7 @@ export default () =>{
             
                                 </Col>
                                 <Col className='ButtonCol'>
-                                    <Button className='ButtonCol2' type="submit">Cari Mobil</Button>
+                                    <Button className='ButtonCol2' type="submit" onClick={handleSearch}>Cari Mobil</Button>
                                 </Col>
                            </Row>
                        </Card>
@@ -71,3 +73,4 @@ export default () =>{
 
 
 }
+export default Forms

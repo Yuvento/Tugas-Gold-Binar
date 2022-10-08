@@ -19,7 +19,10 @@
     margin-top: 2rem;
 }
 
-@media  (max-width : 767px){
+@media  (max-width : 812px){
+    .Drop{
+        text-align: center;
+    }
     .Drop2{
         text-align: center;
         margin-top: 2rem;
